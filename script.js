@@ -7,6 +7,7 @@ const error=document.querySelector(".error");
 
 const reset=()=>{
     error.style.display="none";
+    weatherIcon.style.display="none";
     document.querySelector(".city").innerHTML="______";
     document.querySelector(".temp").innerHTML="--"+"°C";
     document.querySelector(".humidity").innerHTML="-"+"%";
@@ -20,6 +21,7 @@ const checkWeather=async (city)=>{
     let data=await response.json();
     console.log(data);
     let condition=data.weather[0].main;
+    weatherIcon.style.display="inline-block";
     if(condition==="Clear") weatherIcon.src="clear.png";
     if(condition==="Clouds") weatherIcon.src="clouds.png";
     if(condition==="Drizzle") weatherIcon.src="drizzle.png";

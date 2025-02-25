@@ -16,6 +16,7 @@ const reset=()=>{
 
 const checkWeather=async (city)=>{
     reset();
+    city=city.trim();
     const response=await fetch(apiUrl+city+`&appid=${apiKey}`);
     if(response.status===404) error.style.display="block";
     let data=await response.json();

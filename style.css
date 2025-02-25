@@ -81,6 +81,9 @@ body{
 .humidity,.wind{
     font-size:5vmin;
 }
+.weather-icon{
+    display:none;
+}
 .error{
     background-color: red;
     margin:0 8vmin;
